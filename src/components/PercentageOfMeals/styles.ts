@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components/native";
-import { ArrowUpRight } from "phosphor-react-native";
+import { ArrowUpRight, ArrowLeft } from "phosphor-react-native";
 import { TouchableOpacity } from "react-native";
 
 type Props = {
@@ -7,8 +7,7 @@ type Props = {
 };
 
 export const Container = styled(TouchableOpacity)<Props>`
-  width: 100%;
-  height: 102px;
+  flex: 1;
 
   background-color: ${({ theme, isBelow }) =>
     isBelow ? theme.COLORS.RED_LIGHT : theme.COLORS.GREEN_LIGHT};
@@ -44,4 +43,13 @@ export const Icon = styled(ArrowUpRight).attrs<Props>(({ theme, isBelow }) => ({
   position: absolute;
   top: 10px;
   right: 10px;
+`;
+
+export const Back = styled(ArrowLeft).attrs<Props>(({ theme, isBelow }) => ({
+  size: 24,
+  color: isBelow ? theme.COLORS.RED_DARK : theme.COLORS.GREEN_DARK,
+}))`
+  position: absolute;
+  top: 30px;
+  left: 24px;
 `;
