@@ -4,7 +4,7 @@ type Props = {
   value: number;
 };
 
-export function Statistics({ value }: Props) {
+export function PercentageOfMeals({ value }: Props) {
   return (
     <Container isBelow={value < 60}>
       <Value>{value}%</Value>

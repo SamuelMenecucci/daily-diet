@@ -1,6 +1,6 @@
 import { Header } from "@components/Header";
 import { Container, Date, MealsContainer, Title } from "./styles";
-import { Statistics } from "@components/Statistics";
+import { PercentageOfMeals } from "@components/PercentageOfMeals";
 import { Button } from "@components/Button";
 import { MealCard } from "@components/MealCard";
 
@@ -9,7 +9,7 @@ export function Home() {
     <Container>
       <Header />
 
-      <Statistics value={90.86} />
+      <PercentageOfMeals value={90.86} />
 
       <Title>Refeições</Title>
 
