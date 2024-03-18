@@ -6,7 +6,7 @@ type Props = {
   isBelow: boolean;
 };
 
-export const Container = styled(TouchableOpacity)<Props>`
+export const Container = styled.View<Props>`
   flex: 1;
 
   background-color: ${({ theme, isBelow }) =>
